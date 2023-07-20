@@ -10,7 +10,7 @@ class Doctor extends StatelessWidget {
       child: ListView.separated(
         itemBuilder: (ctx, index){
           return Container(
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Color.fromARGB(26, 0, 97, 110),),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: const Color.fromARGB(26, 0, 97, 110),),
             child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -47,7 +47,7 @@ class Doctor extends StatelessWidget {
                           fontWeight: FontWeight.w300
                         ),
                       ),
-                      const SizedBox(height: 10,),
+                      SizedBox(height: 10,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -70,16 +70,16 @@ class Doctor extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.all(25.0),
-                  child: CircleAvatar(radius: 50, backgroundColor: Color.fromARGB(50, 13, 177, 173),),
+                  child: CircleAvatar(radius: 50, backgroundImage: NetworkImage('https://i.pngimg.me/thumb/f/720/1d714a7743.jpg'), backgroundColor: Color.fromARGB(50, 13, 177, 173),),
                 ),
               ],
             )
           );
         }, 
         separatorBuilder: (ctx, index){
-          return SizedBox(height: 10);
+          return const SizedBox(height: 10);
         }, 
-        itemCount: 5
+        itemCount: 3
       ),
     );
   }

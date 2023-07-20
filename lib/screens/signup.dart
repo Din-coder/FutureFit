@@ -19,13 +19,14 @@ class SignupScreen extends StatelessWidget {
               children: [
                 const Text(
                   'SignUp',
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 24.0,
-                    fontWeight: FontWeight.normal,
+                    fontWeight: FontWeight.w600,
+                    color: Color.fromARGB(255, 13, 177, 173)
                   ),
                 ),
                 const SizedBox(height: 10,),
-                Container(
+                SizedBox(
                   height: 50,
                   child: TextFormField(
                     controller: emailController,
@@ -36,7 +37,7 @@ class SignupScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 10,),
-                Container(
+                SizedBox(
                   height: 50,
                   child: TextFormField(
                     controller: userController,
@@ -47,7 +48,7 @@ class SignupScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 10,),
-                Container(
+                SizedBox(
                   height: 50,
                   child: TextFormField(
                     obscureText: true,
@@ -70,9 +71,9 @@ class SignupScreen extends StatelessWidget {
                     ),
                     Switch(
                       value: true, 
-                      activeColor: Color.fromARGB(255, 0, 0, 0),
-                      inactiveTrackColor: Color.fromARGB(255, 255, 255, 255),
-                      activeTrackColor: const Color.fromARGB(150, 158, 158, 158),
+                      activeColor: const Color.fromARGB(255, 13, 177, 173),
+                      inactiveTrackColor: const Color.fromARGB(255, 255, 255, 255),
+                      activeTrackColor: const Color.fromARGB(149, 196, 195, 195),
                       onChanged: (ctx){
 
                       }
@@ -83,19 +84,18 @@ class SignupScreen extends StatelessWidget {
                 ElevatedButton(
                   onPressed: (){
                     LoginWithData();
-                  }, 
-                  child: Text('SIGNUP'),
+                  },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.black,
-                    onPrimary: Colors.white,
+                    foregroundColor: Colors.white, backgroundColor: const Color.fromARGB(255, 13, 177, 173),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5), // Set the border radius here
                     ), 
-                    minimumSize: Size(double.infinity, 50)
-                  ),
+                    minimumSize: const Size(double.infinity, 50)
+                  ), 
+                  child: const Text('SIGNUP'),
                 ),
                 
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
@@ -125,10 +125,11 @@ class SignupScreen extends StatelessWidget {
     );
   }
 
+  // ignore: non_constant_identifier_names
   Future<void> LoginWithData() async{
-    final email = emailController.text;
     final user = userController.text;
     final password = userController.text;
+    // ignore: unrelated_type_equality_checks
     if(user == password){
 
     }

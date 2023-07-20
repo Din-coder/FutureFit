@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:futurefit/screens/AfterLogin/widgets/home/homeextended.dart';
 
 class Home extends StatelessWidget {
+  // ignore: use_key_in_widget_constructors
   const Home({Key? key});
 
   @override
@@ -69,7 +70,7 @@ class Home extends StatelessWidget {
                 'Today',
                 style: TextStyle(
                   fontSize: 18,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.normal,
                   color: Color.fromARGB(195, 0, 0, 0),
                 ),
               ),

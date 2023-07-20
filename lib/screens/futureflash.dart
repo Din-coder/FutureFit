@@ -5,15 +5,13 @@ class FlashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
-        child: Container(
-          child: Text(
-            'FutureFit',
-            style: TextStyle(
-              fontSize: 48,
-              color: Color.fromARGB(255, 0, 120, 150),
-            ),
+        child: Text(
+          'FutureFit',
+          style: TextStyle(
+            fontSize: 48,
+            color: Color.fromARGB(255, 0, 120, 150),
           ),
         ),
       ),

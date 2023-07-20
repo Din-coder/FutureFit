@@ -6,28 +6,31 @@ import 'package:futurefit/screens/AfterLogin/widgets/profile/profile.dart';
 import 'package:futurefit/screens/AfterLogin/widgets/settings.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // ignore: non_constant_identifier_names
   int current_Index = 0;
 
+  // ignore: non_constant_identifier_names
   List<Widget> bottom_screens = [
-    Home(),
+    const Home(),
     Profile(),
-    NotificationScreen(),
-    Doctor(),
+    const NotificationScreen(),
+    const Doctor(),
     Settings()
   ];
 
+  // ignore: non_constant_identifier_names
   List<String> screen_names = [
     'FutureFit',
     'Profile',
     'Alerts',
-    'Doctor',
+    'Support',
     'Settings'
   ];
 
@@ -44,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: const TextStyle(
                   color: Color.fromARGB(255, 13, 177, 173),
                   fontSize: 28,
-                  fontWeight: FontWeight.w500
+                  fontWeight: FontWeight.w600
                 ),
               ),
             ],
@@ -61,8 +64,8 @@ class _HomeScreenState extends State<HomeScreen> {
             current_Index = index;
           });
         },
-        selectedItemColor: Color.fromARGB(199, 13, 177, 174),
-        unselectedItemColor: Color.fromARGB(199, 158, 158, 158),
+        selectedItemColor: const Color.fromARGB(199, 13, 177, 174),
+        unselectedItemColor: const Color.fromARGB(199, 158, 158, 158),
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home, size: 35,),
@@ -83,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.add, size: 35,),
             activeIcon: Icon(Icons.add_outlined, size: 35,),
-            label: 'Doctor'
+            label: 'Support'
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings, size: 35,),

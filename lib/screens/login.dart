@@ -18,16 +18,23 @@ class LoginScreen extends StatelessWidget {
               children: [
                 const Text(
                   'SignIn',
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 24.0,
-                    fontWeight: FontWeight.normal,
+                    fontWeight: FontWeight.w600,
+                    color: Color.fromARGB(255, 13, 177, 173)
                   ),
                 ),
-                const SizedBox(height: 10,),
+                const SizedBox(height: 20,),
                 TextFormField(
                   controller: userController,
                   decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.red,
+                        width: 2,
+                      )
+                    ),
+                    
                     hintText: 'Username',
                   ),
                 ),
@@ -43,12 +50,12 @@ class LoginScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Remember me'),
+                    const Text('Remember me'),
                     Switch(
                       value: true, 
-                      activeColor: Color.fromARGB(255, 0, 0, 0),
-                      inactiveTrackColor: Color.fromARGB(255, 255, 255, 255),
-                      activeTrackColor: const Color.fromARGB(150, 158, 158, 158),
+                      activeColor: const Color.fromARGB(255, 13, 177, 173),
+                      inactiveTrackColor: const Color.fromARGB(255, 255, 255, 255),
+                      activeTrackColor: const Color.fromARGB(149, 199, 199, 199),
                       onChanged: (ctx){
 
                       }
@@ -59,18 +66,17 @@ class LoginScreen extends StatelessWidget {
                 ElevatedButton(
                   onPressed: (){
         
-                  }, 
-                  child: Text('SIGNIN'),
+                  },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.black,
-                    onPrimary: Colors.white,
+                    foregroundColor: Colors.white, backgroundColor: const Color.fromARGB(255, 13, 177, 173),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5), // Set the border radius here
                     ), 
-                    minimumSize: Size(double.infinity, 50)
-                  ),
+                    minimumSize: const Size(double.infinity, 50)
+                  ), 
+                  child: const Text('SIGNIN'),
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
@@ -99,6 +105,7 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
+  // ignore: non_constant_identifier_names
   Future<void> LoginWithData() async{
     final user = userController.text;
     final password = userController.text;

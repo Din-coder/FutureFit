@@ -10,7 +10,7 @@ class NotificationScreen extends StatelessWidget {
       child: ListView.separated(
         itemBuilder: (ctx, index){
           return Container(
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Color.fromARGB(26, 0, 97, 110),),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: const Color.fromARGB(26, 0, 97, 110),),
             child: const ListTile(
               leading: Icon(
                 Icons.notifications,
@@ -33,7 +33,7 @@ class NotificationScreen extends StatelessWidget {
           );
         }, 
         separatorBuilder: (ctx, index){
-          return SizedBox(height: 10);
+          return const SizedBox(height: 10);
         }, 
         itemCount: 3
       ),
