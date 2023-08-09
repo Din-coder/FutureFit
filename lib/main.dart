@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:futurefit/db/models/db_models.dart';
 import 'package:futurefit/screens/AfterLogin/homescreen.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
+Future<void> main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  if(Hive.isAdapterRegistered(UserModelAdapter().typeId)){
+    Hive.registerAdapter(UserModelAdapter());
+  }
   runApp(const MyApp());
 }
 
@@ -17,8 +24,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
+      home: HomeScreen(),
     );
   }
 }
-

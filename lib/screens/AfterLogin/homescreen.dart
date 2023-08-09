@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:futurefit/screens/AfterLogin/widgets/doctor.dart';
 import 'package:futurefit/screens/AfterLogin/widgets/home/home.dart';
-import 'package:futurefit/screens/AfterLogin/widgets/notifications.dart';
+import 'package:futurefit/screens/AfterLogin/widgets/notifications/notifications.dart';
 import 'package:futurefit/screens/AfterLogin/widgets/profile/profile.dart';
-import 'package:futurefit/screens/AfterLogin/widgets/settings.dart';
+import 'package:futurefit/screens/AfterLogin/widgets/settings/settings.dart';
+import 'package:futurefit/screens/AfterLogin/widgets/support/doctor.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const Home(),
     Profile(),
     const NotificationScreen(),
-    const Doctor(),
+    Doctor(),
     Settings()
   ];
 
