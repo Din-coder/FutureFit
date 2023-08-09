@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:futurefit/screens/AfterLogin/widgets/settings/account_settings/account_settings.dart';
 
 class Settings extends StatelessWidget {
   Settings({super.key});
 
   // ignore: non_constant_identifier_names
   final setting_List = [
-    {'set': const Text('Account settings'), 'ico': const Icon(Icons.account_box)},
+    {'set': const Text('Account settings'), 'ico': const Icon(Icons.account_box), },
     {'set': const Text('Notification settings'), 'ico': const Icon(Icons.notifications)},
     {'set': const Text('Data and storage'), 'ico': const Icon(Icons.data_usage)},
     {'set': const Text('Subscription settings'), 'ico': const Icon(Icons.subscriptions)},
@@ -19,6 +20,11 @@ class Settings extends StatelessWidget {
         return ListTile(
           leading: setting_List[index]['ico'], // Set the leading icon based on the list
           title: setting_List[index]['set'], // Set the title based on the list
+          onTap: (){
+            Navigator.of(context).push(MaterialPageRoute(builder: (ctx){
+              return AccountSettings();
+            }));
+          },
         );
       },
       separatorBuilder: (ctx, index) {

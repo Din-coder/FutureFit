@@ -17,160 +17,119 @@ class HomeExtended extends StatelessWidget {
                   color: Color.fromARGB(50, 150, 0, 0),
                   borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(30, 8, 20, 8),
-                      child: Row(
+                child: const Padding(
+                  padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(Icons.heart_broken_sharp,
+                          color: Color.fromARGB(150, 0, 0, 0)),
+                      Text('Heart Rate',
+                          style: TextStyle(
+                              color: Color.fromARGB(150, 0, 0, 0),
+                              fontWeight: FontWeight.w500
+                          )),
+                      Row(
                         children: [
-                          Icon(Icons.heart_broken_sharp,
-                              color: Color.fromARGB(150, 0, 0, 0)),
-                          SizedBox(
-                            width: 5,
+                          Text(
+                            '78',
+                            style: TextStyle(
+                                color: Color.fromARGB(150, 0, 0, 0),
+                                fontSize: 38,
+                                fontWeight: FontWeight.w700),
                           ),
-                          Text('Heart Rate',
-                              style: TextStyle(
-                                  color: Color.fromARGB(150, 0, 0, 0),
-                                  fontWeight: FontWeight.w500
-                              ))
+                          Text(
+                            ' bpm',
+                            style: TextStyle(
+                                color: Color.fromARGB(150, 0, 0, 0)),
+                          ),
                         ],
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(20, 8, 30, 8),
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                            child: Text(
-                              '78',
-                              style: TextStyle(
-                                  color: Color.fromARGB(150, 0, 0, 0),
-                                  fontSize: 38,
-                                  fontWeight: FontWeight.w700),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Text(
-                              'bpm',
-                              style: TextStyle(
-                                  color: Color.fromARGB(150, 0, 0, 0)),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
+                      
+                    ],
+                  ),
                 ),
               ),
+
+
               const SizedBox(height: 10,),
               Container(
                 decoration: const BoxDecoration(
                   color: Color.fromARGB(50, 0, 150, 7),
                   borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(30, 8, 20, 8),
-                      child: Row(
+                child: const Padding(
+                  padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(Icons.gas_meter,
+                          color: Color.fromARGB(150, 0, 0, 0)),
+                      
+                      Text('Blood Oxygen',
+                          style: TextStyle(
+                              color: Color.fromARGB(150, 0, 0, 0),
+                              fontWeight: FontWeight.w500
+                          )),
+                      Row(
                         children: [
-                          Icon(Icons.gas_meter,
-                              color: Color.fromARGB(150, 0, 0, 0)),
-                          SizedBox(
-                            width: 5,
+                          Text(
+                            '36',
+                            style: TextStyle(
+                                color: Color.fromARGB(150, 0, 0, 0),
+                                fontSize: 38,
+                                fontWeight: FontWeight.w700),
                           ),
-                          Text('Gas',
-                              style: TextStyle(
-                                  color: Color.fromARGB(150, 0, 0, 0),
-                                  fontWeight: FontWeight.w500
-                              ))
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(20, 8, 30, 8),
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                            child: Text(
-                              '36',
-                              style: TextStyle(
-                                  color: Color.fromARGB(150, 0, 0, 0),
-                                  fontSize: 38,
-                                  fontWeight: FontWeight.w700),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Text(
-                              'R',
-                              style: TextStyle(
-                                  color: Color.fromARGB(150, 0, 0, 0)),
-                            ),
+                          Text(
+                            ' R',
+                            style: TextStyle(
+                                color: Color.fromARGB(150, 0, 0, 0)),
                           )
                         ],
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(height: 10,),
+
+              
               Container(
                 decoration: const BoxDecoration(
                   color: Color.fromARGB(50, 100, 50, 0),
                   borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(30, 8, 20, 8),
-                      child: Row(
+                child: const Padding(
+                  padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(Icons.foggy,
+                          color: Color.fromARGB(150, 0, 0, 0)),
+                      
+                      Text('Skin Temperature',
+                          style: TextStyle(
+                              color: Color.fromARGB(150, 0, 0, 0),
+                              fontWeight: FontWeight.w500
+                          )),
+                      Row(
                         children: [
-                          Icon(Icons.foggy,
-                              color: Color.fromARGB(150, 0, 0, 0)),
-                          SizedBox(
-                            width: 5,
+                          Text(
+                            '20',
+                            style: TextStyle(
+                                color: Color.fromARGB(150, 0, 0, 0),
+                                fontSize: 38,
+                                fontWeight: FontWeight.w700),
                           ),
-                          Text('Humidity',
-                              style: TextStyle(
-                                  color: Color.fromARGB(150, 0, 0, 0),
-                                  fontWeight: FontWeight.w500
-                              ))
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(20, 8, 30, 8),
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                            child: Text(
-                              '20',
-                              style: TextStyle(
-                                  color: Color.fromARGB(150, 0, 0, 0),
-                                  fontSize: 38,
-                                  fontWeight: FontWeight.w700),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Text(
-                              '%',
-                              style: TextStyle(
-                                  color: Color.fromARGB(150, 0, 0, 0)),
-                            ),
+                          Text(
+                            ' %',
+                            style: TextStyle(
+                                color: Color.fromARGB(150, 0, 0, 0)),
                           )
                         ],
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(height: 10,),
@@ -179,52 +138,37 @@ class HomeExtended extends StatelessWidget {
                   color: Color.fromARGB(50, 150, 0, 0),
                   borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(30, 8, 20, 8),
-                      child: Row(
+                child: const Padding(
+                  padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(Icons.air,
+                          color: Color.fromARGB(150, 0, 0, 0)),
+                      
+                      Text('Motion & Rotation',
+                          style: TextStyle(
+                              color: Color.fromARGB(150, 0, 0, 0),
+                              fontWeight: FontWeight.w500
+                          )),
+                      Row(
                         children: [
-                          Icon(Icons.air,
-                              color: Color.fromARGB(150, 0, 0, 0)),
-                          SizedBox(
-                            width: 5,
+                          Text(
+                            '43',
+                            style: TextStyle(
+                                color: Color.fromARGB(150, 0, 0, 0),
+                                fontSize: 38,
+                                fontWeight: FontWeight.w700),
                           ),
-                          Text('Air Pressure',
-                              style: TextStyle(
-                                  color: Color.fromARGB(150, 0, 0, 0),
-                                  fontWeight: FontWeight.w500
-                              ))
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(20, 8, 30, 8),
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                            child: Text(
-                              '43',
-                              style: TextStyle(
-                                  color: Color.fromARGB(150, 0, 0, 0),
-                                  fontSize: 38,
-                                  fontWeight: FontWeight.w700),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Text(
-                              'hpa',
-                              style: TextStyle(
-                                  color: Color.fromARGB(150, 0, 0, 0)),
-                            ),
+                          Text(
+                            ' hpa',
+                            style: TextStyle(
+                                color: Color.fromARGB(150, 0, 0, 0)),
                           )
                         ],
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(height: 10,),
@@ -233,52 +177,37 @@ class HomeExtended extends StatelessWidget {
                   color: Color.fromARGB(50, 0, 150, 0),
                   borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(30, 8, 0, 8),
-                      child: Row(
+                child: const Padding(
+                  padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(Icons.stream,
+                          color: Color.fromARGB(150, 0, 0, 0)),
+                
+                      Text('Environmental Data',
+                          style: TextStyle(
+                              color: Color.fromARGB(150, 0, 0, 0),
+                              fontWeight: FontWeight.w500
+                          )),
+                      Row(
                         children: [
-                          Icon(Icons.stream,
-                              color: Color.fromARGB(150, 0, 0, 0)),
-                          SizedBox(
-                            width: 5,
+                          Text(
+                            '45',
+                            style: TextStyle(
+                                color: Color.fromARGB(150, 0, 0, 0),
+                                fontSize: 38,
+                                fontWeight: FontWeight.w700),
                           ),
-                          Text('Ambiant Temperature',
-                              style: TextStyle(
-                                  color: Color.fromARGB(150, 0, 0, 0),
-                                  fontWeight: FontWeight.w500
-                              ))
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(0, 8, 30, 8),
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                            child: Text(
-                              '45',
-                              style: TextStyle(
-                                  color: Color.fromARGB(150, 0, 0, 0),
-                                  fontSize: 38,
-                                  fontWeight: FontWeight.w700),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Text(
-                              'c',
-                              style: TextStyle(
-                                  color: Color.fromARGB(150, 0, 0, 0)),
-                            ),
+                          Text(
+                            'c',
+                            style: TextStyle(
+                                color: Color.fromARGB(150, 0, 0, 0)),
                           )
                         ],
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               
