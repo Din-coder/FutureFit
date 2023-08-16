@@ -4,7 +4,7 @@ part 'db_models.g.dart';
 @HiveType(typeId: 1)
 class UserModel{
   @HiveField(0)
-  late final String user_id;
+  String? user_id;
   @HiveField(1)
   final String username;
   @HiveField(2)
@@ -16,5 +16,7 @@ class UserModel{
     required this.username, 
     required this.email, 
     required this.password
-  });
+  }){
+    user_id = DateTime.now().millisecondsSinceEpoch.toString();
+  }
 }

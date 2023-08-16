@@ -20,7 +20,7 @@ class UserModelAdapter extends TypeAdapter<UserModel> {
       username: fields[1] as String,
       email: fields[2] as String,
       password: fields[3] as String,
-    )..user_id = fields[0] as String;
+    )..user_id = fields[0] as String?;
   }
 
   @override
