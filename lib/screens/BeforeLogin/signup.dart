@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:futurefit/db/functions/db_functions.dart';
 import 'package:futurefit/db/models/db_models.dart';
 import 'package:futurefit/screens/BeforeLogin/login.dart';
+import 'package:futurefit/screens/BeforeLogin/Register/add_more_details.dart';
 
 class SignupScreen extends StatelessWidget {
   SignupScreen({super.key});
@@ -63,18 +64,24 @@ class SignupScreen extends StatelessWidget {
                   const SizedBox(height: 10,),
                   TextFormField(
                     controller: emailController,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30)
+                      ),
                       hintText: 'Email',
+                      contentPadding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
                     ),
                     validator: ValidateEmail,
                   ),
                   const SizedBox(height: 10,),
                   TextFormField(
                     controller: userController,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30)
+                      ),
                       hintText: 'Username',
+                      contentPadding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
                     ),
                     validator: (username)=>username!.length<3?'Please enter a valid username':null,
                   ),
@@ -82,9 +89,12 @@ class SignupScreen extends StatelessWidget {
                   TextFormField(
                     obscureText: true,
                     controller: passwordController,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      hintText: 'Password'
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30)
+                      ),
+                      hintText: 'Password',
+                      contentPadding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
                     ),
                     validator: ValidatePassword,
                   ),
@@ -122,17 +132,17 @@ class SignupScreen extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.white, backgroundColor: const Color.fromARGB(255, 13, 177, 173),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5), // Set the border radius here
+                        borderRadius: BorderRadius.circular(30), // Set the border radius here
                       ), 
-                      minimumSize: const Size(double.infinity, 50)
+                      minimumSize: const Size(double.infinity, 45)
                     ), 
                     child: const Text('SIGNUP'),
                   ),
                   
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                      const Text(
                         'Already a member?',
                         style: TextStyle(
                           color: Colors.grey,
@@ -140,14 +150,24 @@ class SignupScreen extends StatelessWidget {
                           fontWeight: FontWeight.w600
                         ),
                       ),
-                      Text(
-                        ' SignIn.',
-                        style: TextStyle(
-                          color: Color.fromARGB(117, 0, 94, 94),
-                          fontSize: 14,
-                          fontWeight: FontWeight.normal,
-                        ),
-                      )
+                      TextButton(
+                        onPressed: (){
+                          Navigator.of(context).pushAndRemoveUntil(
+                            MaterialPageRoute(builder: (ctx){
+                              return LoginScreen();
+                            }), 
+                            (route) => false);
+                        }, 
+                        child: const Text(
+                          ' SignIn.',
+                          style: TextStyle(
+                            color: Color.fromARGB(117, 0, 94, 94),
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        )
+                      ),
+                      
                     ],
                   ),
                 ],
@@ -164,7 +184,7 @@ class SignupScreen extends StatelessWidget {
   Future<void> SignUpWithData(BuildContext ctx) async{
     final user = userController.text;
     final email = emailController.text;
-    final password = userController.text;
+    final password = passwordController.text;
     bool isOriginal = true;
 
 
